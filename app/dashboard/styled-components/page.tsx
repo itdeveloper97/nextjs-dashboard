@@ -11,7 +11,7 @@ export default function Page() {
           Right
         </Description>
 
-        <Description>Styled Components have been configured</Description>
+        <Description>Styled Components have been configured!!!</Description>
       </Flex>
     </div>
   );
