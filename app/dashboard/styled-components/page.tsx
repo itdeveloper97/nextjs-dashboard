@@ -10,6 +10,8 @@ export default function Page() {
           This is small description support you see if Styled Components is Work
           Right
         </Description>
+
+        <Description>Styled Components have been configured!!!</Description>
       </Flex>
     </div>
   );
