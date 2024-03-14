@@ -12,6 +12,10 @@ export default function Page() {
         </Description>
 
         <Description>Styled Components have been configured!!!</Description>
+
+        <Button onClick={() => alert('Hello I`m Styled Button')}>
+          Hello I`m Styled Button
+        </Button>
       </Flex>
     </div>
   );
@@ -34,4 +38,12 @@ const Description = styled.div`
   font-size: 24px;
   font-weight: bold;
   text-align: center;
+`;
+
+const Button = styled.button`
+  width: fit-content;
+  background-color: ${(theme) => theme.theme.color.primary};
+  padding: ${({ theme }) => theme.spacing.sp8};
+  border-radius: ${({ theme }) => theme.radius.r12};
+  color: ${({ theme }) => theme.color.white};
 `;
