@@ -1,6 +1,6 @@
 'use client';
 import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components';
-import { PropsWithChildren, useEffect } from 'react';
+import { PropsWithChildren } from 'react';
 import { themes } from '@/app/lib/theme/theme';
 import { useThemeModeStore } from '@/app/lib/theme/store/useThemeModeStore';
 import useStore from '@/app/lib/zustand/hooks/useStore';

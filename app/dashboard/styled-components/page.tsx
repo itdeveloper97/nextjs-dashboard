@@ -4,8 +4,6 @@ import styled from 'styled-components';
 import { useThemeModeStore } from '@/app/lib/theme/store/useThemeModeStore';
 
 export default function Page() {
-  const mode = useThemeModeStore();
-
   return (
     <div>
       <Flex>
