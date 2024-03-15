@@ -1,7 +1,11 @@
 'use client';
+
 import styled from 'styled-components';
+import { useThemeModeStore } from '@/app/lib/theme/store/useThemeModeStore';
 
 export default function Page() {
+  const mode = useThemeModeStore();
+
   return (
     <div>
       <Flex>
@@ -15,6 +19,12 @@ export default function Page() {
 
         <Button onClick={() => alert('Hello I`m Styled Button')}>
           Hello I`m Styled Button
+        </Button>
+        <Button onClick={() => useThemeModeStore.setState({ mode: 'light' })}>
+          Switch to Light Mode
+        </Button>
+        <Button onClick={() => useThemeModeStore.setState({ mode: 'dark' })}>
+          Switch to Dark Mode
         </Button>
       </Flex>
     </div>
@@ -42,8 +52,8 @@ const Description = styled.div`
 
 const Button = styled.button`
   width: fit-content;
-  background-color: ${(theme) => theme.theme.color.primary};
+  color: ${({ theme }) => theme.color.primary};
+  background-color: ${(theme) => theme.theme.bgColor.primary};
   padding: ${({ theme }) => theme.spacing.sp8};
   border-radius: ${({ theme }) => theme.radius.r12};
-  color: ${({ theme }) => theme.color.white};
 `;
